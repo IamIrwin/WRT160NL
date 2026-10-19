@@ -1,0 +1,27 @@
+Get-FileHash .\openwrt-ar71xx-generic-wrt160nl-squashfs-factory.bin  -Algorithm SHA256
+
+Algorithm       Hash                                                                   Path
+---------       ----                                                                   ----
+SHA256          8136AF560A21255FC39EFC3DDBECA10EA0AB9483ED52DF6DE660AD51E8C672EE       C:\Users\mm\Desktop\WRT160NL\...
+
+
+Get-FileHash .\openwrt-ar71xx-generic-wrt160nl-squashfs-sysupgrade.bin  -Algorithm SHA256
+
+Algorithm       Hash                                                                   Path
+---------       ----                                                                   ----
+SHA256          7EB675D024454C5C89EBE313491DA1A471C923F1B6D05CEB1D924070180C7944       C:\Users\mm\Desktop\WRT160NL\...
+
+
+去掉
+package-luci-app-storage
+package-storage-manager
+PACKAGE_samba36-serve
+
+
+usb手机网卡可用做wan
+
+root@OpenWrt:/# free
+              total        used        free      shared  buff/cache   available
+Mem:          27884       13512        3136         344       11236       11904
+Swap:             0           0           0
+root@OpenWrt:/# 

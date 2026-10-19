@@ -1,0 +1,18 @@
+Get-FileHash .\openwrt-ar71xx-generic-wrt160nl-squashfs-factory.bin  -Algorithm SHA256
+
+Algorithm       Hash                                                                   Path
+---------       ----                                                                   ----
+SHA256          DD478B98D6141890E8ACE4E2F565420E22FEBCC933F60EA6F9B5F291F5FD74EE       Z:\prj\openwrt-1907\bin\targe...
+
+
+Get-FileHash .\openwrt-ar71xx-generic-wrt160nl-squashfs-sysupgrade.bin  -Algorithm SHA256
+
+Algorithm       Hash                                                                   Path
+---------       ----                                                                   ----
+SHA256          9690749BFBD7B36A8B5BA0AEFC0F924B0566E122950E35F46F918A1DAECFD7E1       Z:\prj\openwrt-1907\bin\targe...
+
+root@OpenWrt:/# free
+              total        used        free      shared  buff/cache   available
+Mem:          27884       13124        2300         540       12460       12128
+Swap:             0           0           0
+root@OpenWrt:/# 

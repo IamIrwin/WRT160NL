@@ -1,0 +1,5 @@
+Get-FileHash .\openwrt-19.07.10-ar71xx-generic-wrt160nl-squashfs-sysupgrade.bin -Algorithm SHA256
+
+Algorithm       Hash                                                                   Path
+---------       ----                                                                   ----
+SHA256          4A8DA18EEA3A5604333AD2C060FA55E8687AE51BC497E42F962DBD34F9011EAD       

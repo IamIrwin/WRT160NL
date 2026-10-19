@@ -1,0 +1,32 @@
+
+printf '%s\n' '#!/bin/sh' 'mkdir -p /mnt/usb' 'sleep 5' 'mountpoint -q /mnt/usb && exit 0' 'for dev in /dev/sd[a-z]1; do' '    [ -b "$dev" ] || continue' '    mount -t vfat -o uid=65534,gid=65534,fmask=0111,dmask=0000 "$dev" /mnt/usb 2>/dev/null' '    if mountpoint -q /mnt/usb; then' '        logger -t usb-mount "Mounted $dev on /mnt/usb"' '        exit 0' '    fi' 'done' 'logger -t usb-mount "No FAT32 USB partition found"' 'exit 0' > /etc/usb-mount.sh
+
+
+WRT160NL_flash_8MB.bin
+WRT160NL_flash_8MB.sha256
+9eba9dc78990134375e83d86c92b0d2ce1af3a5a718ac1717e11c7d95109051d
+
+文件：
+WRT160NL_u-boot_256KB.bin
+
+大小：
+262144 bytes
+= 256 KiB
+
+SHA256：
+786c4d9472d92f3b646acab632641b1dac1e8d903a5bd6beaa30e35985fef59d
+
+以后要恢复固件时，WRT160NL_u-boot_256KB.bin 要烧写到flash的起始地址是多少
+应该烧写到 Flash 起始地址 0x000000。
+Flash:
+0x000000 ┌─────────────────────┐
+          │ U-Boot              │ 256 KB
+0x040000 ├─────────────────────┤
+          │ kernel / firmware   │
+          │                     │
+0x7E0000 ├─────────────────────┤
+          │ nvram               │ 64 KB
+0x7F0000 ├─────────────────────┤
+          │ ART                 │ 64 KB
+0x800000 └─────────────────────┘
+

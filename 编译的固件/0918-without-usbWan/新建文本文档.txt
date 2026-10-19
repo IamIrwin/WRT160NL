@@ -1,0 +1,17 @@
+去掉usb wan功能。能传输250m的mp4
+
+>  Get-FileHash .\openwrt-ar71xx-generic-wrt160nl-squashfs-sysupgrade.bin  -Algorithm SHA256
+
+Algorithm       Hash                                                                   Path
+---------       ----                                                                   ----
+SHA256          6B93D6A7ABAE083A90214A5EB1E99523E241DA0A19CB8395FC73A0AF583B2F6D       Z:\prj\openwrt-1907\bin\targe...
+
+
+Get-FileHash .\openwrt-ar71xx-generic-wrt160nl-squashfs-factory.bin  -Algorithm SHA256
+
+Algorithm       Hash                                                                   Path
+---------       ----                                                                   ----
+SHA256          F814EA7B61AD3324B296025B1786129BE7B15A11714FAF86261170A7224FFE3D       Z:\prj\openwrt-1907\bin\targe...
+
+
+PS Z:\prj\openwrt-1907\bin\targets\ar71xx\generic>
